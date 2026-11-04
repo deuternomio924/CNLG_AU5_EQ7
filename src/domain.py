@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 
+
 class CustomerHasDebt(Exception):
     pass
 
@@ -9,16 +10,12 @@ class Order:
     vip: bool = False
     status: str = "NEW"
     discount: float = 0.0
-#
     def _verificar_no_confirmado(self):
         if self.status == "CONFIRMED":
             raise ValueError("already confirmed")
-#
 
     def confirm(self, customer_debt=0):
-        #
         self._verificar_no_confirmado()
-        #
         if self.total <= 0:
             raise ValueError("total must be positive")
         if customer_debt > 0:

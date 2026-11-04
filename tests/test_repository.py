@@ -1,7 +1,9 @@
-from sqlalchemy.orm import Session
 from sqlalchemy import select
+from sqlalchemy.orm import Session
+
 from src.domain import Order
-from src.repository import make_engine, SqlOrderRepository, OrderRow
+from src.repository import OrderRow, SqlOrderRepository, make_engine
+
 
 def test_repository_commit():
     engine = make_engine()

@@ -1,7 +1,10 @@
 from unittest.mock import Mock
+
 import pytest
-from src.domain import Order
+
 from src.application import OrderService
+from src.domain import Order
+
 
 def test_gateway_approved():
     gateway = Mock()
