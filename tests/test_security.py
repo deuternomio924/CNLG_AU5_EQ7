@@ -27,7 +27,7 @@ def test_new_canceled_admin():
 #///////////
 def test_owner_at_24h():
     now = datetime.now(UTC)
-    assert '''not''' can_cancel("NEW", 1, 1, False, now - timedelta(hours=24), now)
+    assert not can_cancel("NEW", 1, 1, False, now - timedelta(hours=24), now)
 
 
 
