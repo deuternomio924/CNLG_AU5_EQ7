@@ -23,3 +23,4 @@ class Order:
         self.discount = round(self.total * 0.15, 2) if self.vip else 0.0
         self.status = "CONFIRMED"
         return self.total - self.discount
+    #////////
